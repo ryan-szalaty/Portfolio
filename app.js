@@ -2,13 +2,15 @@ const express = require('express');
 require('dotenv').config();
 const colors = require('colors');
 
+const quotes = require('./public/utils/quotes');
+
 const app = express();
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {quote: quotes[Math.floor(Math.random() * quotes.length)]});
 });
 
 app.get('/download', (req, res) => {
