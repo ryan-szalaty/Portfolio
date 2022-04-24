@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
   }
