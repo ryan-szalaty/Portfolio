@@ -8,5 +8,28 @@ const quotes = [
     "If it works, don't fix it."
 ];
 
-module.exports = quotes;
+let quote = quotes[0];
+
+document.getElementById('quote').innerText = quote;
+
+getQuote = () => {
+    const quoteElement = document.getElementById('quote');
+    quote = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteElement.innerText = quote;
+    quoteElement.animate([
+        {
+            opacity: 0,
+            left: 0
+        },
+        {
+            opacity: 1,
+            left: "5%",
+            transition: "ease-in-out"
+        }
+    ], 2000);
+}
+
+setInterval(getQuote, 5000);
+
+
 
