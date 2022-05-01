@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/download', (req, res) => {
-    const file = `${__dirname}/public/files/resume.pdf`;
+    const file = `${__dirname}/public/files/Resume.pdf`;
     res.download(file);
 });
 
